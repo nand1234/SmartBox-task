@@ -5,7 +5,5 @@ import org.junit.runner.RunWith;
 @Cucumber.Options(
         features={"src/test/java/resources"}
         ,glue={"stepDefinition"}
-        ,format = {"preety"}
-        ,monochrome = true
 )
-public class runner {}
+public class RunCukesTest {}

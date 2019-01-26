@@ -1,13 +1,19 @@
 package stepDefinition;
 
+import Lib.BrowserFactory;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
 
-public class addtocartsteps {
+public class AddToCartSteps {
 
     @Given("^I am officiating a FizzBuzz game$")
     public void I_am_officiating_a_FizzBuzz_game() throws Throwable {
+        BrowserFactory browser = new BrowserFactory();
+         WebDriver driver= browser.GetBrowser();
+         driver.get(System.getProperty("TestURL"));
         // Express the Regexp above with the code you wish you had
     }
 

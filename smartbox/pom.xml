@@ -40,8 +40,27 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.0.0</version>
-            <scope>test</scope>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.5.1</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -51,9 +70,7 @@
     </dependencies>
     <properties>
         <BrowserName>chrome</BrowserName>
-        <TestURL>https://qa.wsandco.com/ps-w360/</TestURL>
-        <UIValidation>Yes</UIValidation>
-        <PerformanceTest>Yes</PerformanceTest>
+        <TestURL>https://www.smartbox.com/fr</TestURL>
     </properties>
     <build>
         <plugins>
@@ -73,17 +90,10 @@
                 <version>2.22.0</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <BrowserName>${BrowserName}</BrowserName>
-                        <TestURL>${TestURL}</TestURL>
-                        <UIValidation>${UIValidation}</UIValidation>
-                        <PerformanceTest>${PerformanceTest}</PerformanceTest>
-
-
+                        <BrowserName>chrome</BrowserName>
+                        <TestURL>https://www.smartbox.com/fr</TestURL>
+                        <buildDirectory>${project.build.directory}</buildDirectory>
                     </systemPropertyVariables>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src\test\java\woodruff360UI\testsuites/regression.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-
                 </configuration>
             </plugin>
         </plugins>

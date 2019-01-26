@@ -1,21 +1,19 @@
-package lib;
+package Lib;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 import java.io.IOException;
-import java.net.URL;
 import java.text.ParseException;
 
-public class browserFactory {
+public class BrowserFactory {
 
     private WebDriver driver;
     private String browserName;
-    private String gridUrl = "";
     private String executionType = "";
 
 
@@ -29,11 +27,14 @@ public class browserFactory {
     public WebDriver GetBrowser() throws IOException, ParseException {
 
         SetExecutionType();
-        if (executionType.equals("local")) switch (browserName) {
+        if (executionType.equals("local"))
+            switch (browserName) {
             case "chrome":
-                driver = new ChromeDriver();
+                WebDriverManager.chromedriver().setup();
+                 driver = new ChromeDriver();
                 break;
             case "firefox":
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
             case "ie":

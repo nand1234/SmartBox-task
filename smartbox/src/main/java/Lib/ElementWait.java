@@ -1,4 +1,4 @@
-package lib;
+package Lib;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class elementWait {
+public class ElementWait {
 
     private static final int GLOBAL_TIME_OUT = 60; // In Seconds
     private static final int GLOBAL_POLLING_TIME = 1; // In Seconds
@@ -44,7 +44,7 @@ public class elementWait {
                     ExpectedConditions.elementToBeClickable(locator));
         else {
             /*try {
-                return elementWait.until(
+                return ElementWait.until(
                         ExpectedConditions.visibilityOfElementLocated(locator));
             }catch(TimeoutException e){*/
             return wait.until(
@@ -88,7 +88,7 @@ public class elementWait {
 
     /**
      * Wait Until Element is clickable
-     * @param elementLocator Element to be elementWait for
+     * @param elementLocator Element to be ElementWait for
      * @param driver WebDriver Instance
      * @return WebElement
      */
