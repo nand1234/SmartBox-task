@@ -11,3 +11,5 @@ The following explains the steps involved in Building and Installing the Solutio
 - Clone the Repository in a local folder
 - Open Project in IntelliJ IDE
 - right click on POM.xml-> import dependencies
+
+![Alt text](http://full/path/to/img.jpg "Automation Architecture Digram")
