@@ -1,9 +1,8 @@
-package Lib;
+package WebdriverLib;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import java.lang.Exception;
 import java.util.List;
 
@@ -55,7 +54,7 @@ public class ElementFactory {
      * @param driver browser webDriver
      * @return WebElement
      */
-    public WebElement FindElement(String locatorType, String locatorValue,WebDriver driver)
+    public WebElement findElement(String locatorType, String locatorValue,WebDriver driver)
     {
         ElementWait wait = new ElementWait();
         By locator;
@@ -80,7 +79,7 @@ public class ElementFactory {
      * @return WebElement
      * @throws InterruptedException
      */
-    public List<WebElement> FindElements(String locatorType, String locatorValue, WebDriver driver) throws InterruptedException
+    public List<WebElement> findElements(String locatorType, String locatorValue, WebDriver driver) throws InterruptedException
     {
         ElementWait wait = new ElementWait();
         By locator;

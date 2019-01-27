@@ -68,10 +68,6 @@
             <version>2.4</version>
         </dependency>
     </dependencies>
-    <properties>
-        <BrowserName>chrome</BrowserName>
-        <TestURL>https://www.smartbox.com/fr</TestURL>
-    </properties>
     <build>
         <plugins>
             <plugin>
@@ -90,6 +86,7 @@
                 <version>2.22.0</version>
                 <configuration>
                     <systemPropertyVariables>
+                        <ExecutionType>local</ExecutionType>
                         <BrowserName>chrome</BrowserName>
                         <TestURL>https://www.smartbox.com/fr</TestURL>
                         <buildDirectory>${project.build.directory}</buildDirectory>

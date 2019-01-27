@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" tests="1">
-<testcase classname="Fizz Buzz Game" name="Get answers based on played numbers" time="0.082995">
-<system-out><![CDATA[Given I am officiating a FizzBuzz game...................................................passed
-]]></system-out>
-</testcase>
-</testsuite>
