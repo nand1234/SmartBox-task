@@ -12,4 +12,4 @@ The following explains the steps involved in Building and Installing the Solutio
 - Open Project in IntelliJ IDE
 - right click on POM.xml-> import dependencies
 
-![Alt text](D:\dataflow.png "Automation Architecture Digram")
+![Alt text](/AutomationArchitecture.png "Automation Architecture Digram")
