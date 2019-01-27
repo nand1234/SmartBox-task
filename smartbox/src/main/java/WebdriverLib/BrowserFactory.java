@@ -51,16 +51,24 @@ public class BrowserFactory {
     }
 
     /**
-     * Navigate to the Test URL
-     * @return WebDriver
+     * Launch browser
+     * @return webdriver instance
      */
-    public WebDriver navigateToURL()
+    public WebDriver launchBrowser()
     {
         _driver = getBrowser(System.getProperty("BrowserName"));
-        _driver.get(System.getProperty("TestURL"));
-        _driver.findElement(By.cssSelector("a[class=\"optanon-alert-box-close banner-close-button\"]")).click();
 
         return _driver;
+    }
+    /**
+     * Navigate to the Test URL
+     * @return Launched URL
+     */
+    public void navigateToURL(WebDriver driver)
+    {
+        driver.get(System.getProperty("TestURL"));
+        driver.findElement(By.cssSelector("a[class=\"optanon-alert-box-close banner-close-button\"]")).click();
+
     }
 
 }

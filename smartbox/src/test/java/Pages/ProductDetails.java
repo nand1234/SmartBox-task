@@ -67,13 +67,13 @@ public class ProductDetails {
     public void addToBasket()
     {
         eleBasket(_cssLocatorType,_basketLocatorValue).click();
-        seeCart();
+        viewCart();
     }
 
     /**
      * See shopping cart
      */
-    public void seeCart()
+    public void viewCart()
     {
         eleCheckCart(_cssLocatorType,_seeCartLocatorValue).click();
     }
