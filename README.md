@@ -12,4 +12,14 @@ The following explains the steps involved in Building and Installing the Solutio
 - Open Project in IntelliJ IDE
 - right click on POM.xml-> import dependencies
 
+# Execute tests using Runner file
+- Open project in IntelliJ IDE Community version
+- Got to Test -> Java -> Runners
+   - select file RunCukesTest -> right click on it -> Run "RunCuckesTest"
+   
+# Execute tests using maven Build
+- Open project in IntelliJ IDE Community version
+- Got to View -> ToolWindows -> Maven
+   - select Test option -> click on Run   
+
 ![Alt text](/AutomationArchitecture.png "Automation Architecture Digram")
