@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.RunCukesTest" time="1.182" tests="4" errors="4" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.RunCukesTest" time="0.703" tests="46" errors="0" skipped="38" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="BrowserName" value="chrome"/>
@@ -19,7 +19,7 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\NANDKU~1\AppData\Local\Temp\surefire3887556570173334402\surefirebooter6013732251395003476.jar C:\Users\Nandkumar\AppData\Local\Temp\surefire3887556570173334402 2019-01-27T15-37-18_037-jvmRun1 surefire5387759093981303246tmp surefire_06660688757241957535tmp"/>
+    <property name="sun.java.command" value="C:\Users\NANDKU~1\AppData\Local\Temp\surefire2385816423999322814\surefirebooter3766596546114976927.jar C:\Users\Nandkumar\AppData\Local\Temp\surefire2385816423999322814 2019-01-27T17-36-48_639-jvmRun1 surefire5171029914871867138tmp surefire_06953432003552071231tmp"/>
     <property name="surefire.test.class.path" value="F:\smartBox\SmartBox-task\smartbox\target\test-classes;F:\smartBox\SmartBox-task\smartbox\target\classes;C:\Users\Nandkumar\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Nandkumar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Nandkumar\.m2\repository\info\cukes\cucumber-junit\1.1.3\cucumber-junit-1.1.3.jar;C:\Users\Nandkumar\.m2\repository\info\cukes\cucumber-core\1.1.3\cucumber-core-1.1.3.jar;C:\Users\Nandkumar\.m2\repository\info\cukes\cucumber-java\1.1.3\cucumber-java-1.1.3.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-java\3.12.0\selenium-java-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.12.0\selenium-api-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.12.0\selenium-chrome-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.12.0\selenium-edge-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.12.0\selenium-firefox-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.12.0\selenium-ie-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.12.0\selenium-opera-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.12.0\selenium-remote-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.12.0\selenium-safari-driver-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.12.0\selenium-support-3.12.0.jar;C:\Users\Nandkumar\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar;C:\Users\Nandkumar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Nandkumar\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Nandkumar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Nandkumar\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Nandkumar\.m2\repository\com\google\guava\guava\23.6-jre\guava-23.6-jre.jar;C:\Users\Nandkumar\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Nandkumar\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Nandkumar\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Nandkumar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Nandkumar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Nandkumar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Nandkumar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Nandkumar\.m2\repository\com\squareup\okhttp3\okhttp\3.9.1\okhttp-3.9.1.jar;C:\Users\Nandkumar\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\plugins\maven-surefire-plugin\2.22.0\maven-surefire-plugin-2.22.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\surefire\maven-surefire-common\2.22.0\maven-surefire-common-2.22.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-plugin-api\2.2.1\maven-plugin-api-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\plugin-tools\maven-plugin-annotations\3.5\maven-plugin-annotations-3.5.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\surefire\surefire-api\2.22.0\surefire-api-2.22.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\surefire\surefire-logger-api\2.22.0\surefire-logger-api-2.22.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\surefire\surefire-booter\2.22.0\surefire-booter-2.22.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-artifact\2.2.1\maven-artifact-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\codehaus\plexus\plexus-utils\1.5.15\plexus-utils-1.5.15.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-plugin-descriptor\2.2.1\maven-plugin-descriptor-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9-stable-1\plexus-container-default-1.0-alpha-9-stable-1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-project\2.2.1\maven-project-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-settings\2.2.1\maven-settings-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-profile\2.2.1\maven-profile-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-artifact-manager\2.2.1\maven-artifact-manager-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\backport-util-concurrent\backport-util-concurrent\3.1\backport-util-concurrent-3.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-plugin-registry\2.2.1\maven-plugin-registry-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.11\plexus-interpolation-1.11.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-model\2.2.1\maven-model-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-core\2.2.1\maven-core-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-plugin-parameter-documenter\2.2.1\maven-plugin-parameter-documenter-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\wagon\wagon-http\1.0-beta-6\wagon-http-1.0-beta-6.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\wagon\wagon-http-shared\1.0-beta-6\wagon-http-shared-1.0-beta-6.jar;C:\Users\Nandkumar\.m2\repository\nekohtml\xercesMinimal\1.9.6.2\xercesMinimal-1.9.6.2.jar;C:\Users\Nandkumar\.m2\repository\nekohtml\nekohtml\1.9.6.2\nekohtml-1.9.6.2.jar;C:\Users\Nandkumar\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\wagon\wagon-webdav-jackrabbit\1.0-beta-6\wagon-webdav-jackrabbit-1.0-beta-6.jar;C:\Users\Nandkumar\.m2\repository\org\apache\jackrabbit\jackrabbit-webdav\1.5.0\jackrabbit-webdav-1.5.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\jackrabbit\jackrabbit-jcr-commons\1.5.0\jackrabbit-jcr-commons-1.5.0.jar;C:\Users\Nandkumar\.m2\repository\org\slf4j\slf4j-nop\1.5.3\slf4j-nop-1.5.3.jar;C:\Users\Nandkumar\.m2\repository\org\slf4j\slf4j-jdk14\1.5.6\slf4j-jdk14-1.5.6.jar;C:\Users\Nandkumar\.m2\repository\org\slf4j\jcl-over-slf4j\1.5.6\jcl-over-slf4j-1.5.6.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\reporting\maven-reporting-api\2.2.1\maven-reporting-api-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\doxia\doxia-logging-api\1.1\doxia-logging-api-1.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-6\wagon-provider-api-1.0-beta-6.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-repository-metadata\2.2.1\maven-repository-metadata-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-error-diagnostics\2.2.1\maven-error-diagnostics-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-monitor\2.2.1\maven-monitor-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\classworlds\classworlds\1.1\classworlds-1.1.jar;C:\Users\Nandkumar\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar;C:\Users\Nandkumar\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar;C:\Users\Nandkumar\.m2\repository\org\apache\maven\maven-toolchain\2.2.1\maven-toolchain-2.2.1.jar;C:\Users\Nandkumar\.m2\repository\org\codehaus\plexus\plexus-java\0.9.8\plexus-java-0.9.8.jar;C:\Users\Nandkumar\.m2\repository\org\ow2\asm\asm\6.1.1\asm-6.1.1.jar;C:\Users\Nandkumar\.m2\repository\com\thoughtworks\qdox\qdox\2.0-M7\qdox-2.0-M7.jar;C:\Users\Nandkumar\.m2\repository\io\github\bonigarcia\webdrivermanager\3.2.0\webdrivermanager-3.2.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;C:\Users\Nandkumar\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\Nandkumar\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\Nandkumar\.m2\repository\org\jsoup\jsoup\1.11.3\jsoup-1.11.3.jar;C:\Users\Nandkumar\.m2\repository\org\slf4j\slf4j-api\1.5.5\slf4j-api-1.5.5.jar;C:\Users\Nandkumar\.m2\repository\net\sf\dozer\dozer\5.5.1\dozer-5.5.1.jar;C:\Users\Nandkumar\.m2\repository\commons-beanutils\commons-beanutils\1.9.1\commons-beanutils-1.9.1.jar;C:\Users\Nandkumar\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\Nandkumar\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Nandkumar"/>
@@ -33,10 +33,11 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\NANDKU~1\AppData\Local\Temp\surefire3887556570173334402\surefirebooter6013732251395003476.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\NANDKU~1\AppData\Local\Temp\surefire2385816423999322814\surefirebooter3766596546114976927.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ExecutionType" value="local"/>
     <property name="java.runtime.version" value="1.8.0_131-b11"/>
     <property name="user.name" value="Nandkumar"/>
     <property name="path.separator" value=";"/>
@@ -64,20 +65,126 @@
     <property name="java.class.version" value="52.0"/>
     <property name="buildDirectory" value="F:\smartBox\SmartBox-task\smartbox\target"/>
   </properties>
-  <testcase name="Given I am officiating a FizzBuzz game" classname="Scenario: Get answers based on played numbers" time="0.023">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-</error>
+  <testcase name="Given Customer on smart box landing page" classname="Scenario: Verify customer searching a box using main search field" time="0">
+    <skipped/>
   </testcase>
-  <testcase name="Scenario: Get answers based on played numbers" classname="Scenario: Get answers based on played numbers" time="0.024">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-</error>
+  <testcase name="When Customer enters box name on the main search field" classname="Scenario: Verify customer searching a box using main search field" time="0">
+    <skipped/>
   </testcase>
-  <testcase name="Feature: Fizz Buzz Game" classname="Feature: Fizz Buzz Game" time="0.027">
-    <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-</error>
+  <testcase name="Then Suggestions are displayed as customer type" classname="Scenario: Verify customer searching a box using main search field" time="0">
+    <skipped/>
   </testcase>
-  <testcase name="runners.RunCukesTest" classname="runners.RunCukesTest" time="0.027">
-    <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-</error>
+  <testcase name="Scenario: Verify customer searching a box using main search field" classname="Scenario: Verify customer searching a box using main search field" time="0">
+    <skipped/>
   </testcase>
+  <testcase name="Scenario: Verify customer searching a box using main search field" classname="Scenario: Verify customer searching a box using main search field" time="0.126"/>
+  <testcase name="Given Customer on smart box landing page" classname="Scenario: Verify customer can see filter options on selecting category and subcategory" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer select category and sub category" classname="Scenario: Verify customer can see filter options on selecting category and subcategory" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then filter options should display" classname="Scenario: Verify customer can see filter options on selecting category and subcategory" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see filter options on selecting category and subcategory" classname="Scenario: Verify customer can see filter options on selecting category and subcategory" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see filter options on selecting category and subcategory" classname="Scenario: Verify customer can see filter options on selecting category and subcategory" time="0"/>
+  <testcase name="Given Customer on smart box landing page" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Given Customer on smart box landing page" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer select category and sub category" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer select category and sub category" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then filter options should display" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then filter options should display" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And suggestions should display in filter box" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And suggestions should display in filter box" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see suggestions in filter search box" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see suggestions in filter search box" classname="Scenario: Verify customer can see suggestions in filter search box" time="0"/>
+  <testcase name="Scenario: Verify customer can see suggestions in filter search box" classname="Scenario: Verify customer can see suggestions in filter search box" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see suggestions in filter search box" classname="Scenario: Verify customer can see suggestions in filter search box" time="0"/>
+  <testcase name="Given Customer on smart box landing page" classname="Scenario: Verify customer can see Review link on box page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer select category and sub category" classname="Scenario: Verify customer can see Review link on box page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then filter options should display" classname="Scenario: Verify customer can see Review link on box page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Review link should display on a box" classname="Scenario: Verify customer can see Review link on box page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see Review link on box page" classname="Scenario: Verify customer can see Review link on box page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify customer can see Review link on box page" classname="Scenario: Verify customer can see Review link on box page" time="0.001"/>
+  <testcase name="Given Customer on smart Box Landing page" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer select category and Subcategory" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then List of products displayed" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer select the product" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Selected Product Detail displayed" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When Customer add item to the Cart" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Product display in the shopping cart" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Customer can Remove the Item from the Cart" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify Customer add and remove desired box to cart" classname="Scenario: Verify Customer add and remove desired box to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify Customer add and remove desired box to cart" classname="Scenario: Verify Customer add and remove desired box to cart" time="0.016"/>
+  <testcase name="Given Customer added item to cart" classname="Scenario: Verify Customer continue shopping after adding item to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Customer continue shopping by adding another item to the cart" classname="Scenario: Verify Customer continue shopping after adding item to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify Customer continue shopping after adding item to cart" classname="Scenario: Verify Customer continue shopping after adding item to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify Customer continue shopping after adding item to cart" classname="Scenario: Verify Customer continue shopping after adding item to cart" time="0.002"/>
+  <testcase name="Given Customer added item to 5 items to cart" classname="Scenario: Verify Customer cannot add more than 5 boxes of each title to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Customer cannot do purchase" classname="Scenario: Verify Customer cannot add more than 5 boxes of each title to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify Customer cannot add more than 5 boxes of each title to cart" classname="Scenario: Verify Customer cannot add more than 5 boxes of each title to cart" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Verify Customer cannot add more than 5 boxes of each title to cart" classname="Scenario: Verify Customer cannot add more than 5 boxes of each title to cart" time="0.011"/>
 </testsuite>
