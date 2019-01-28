@@ -9,7 +9,7 @@ This Solution requires the following Softwares for working and building upon the
 ## Building and Installing
 The following explains the steps involved in Building and Installing the Solution:
 - Clone the Repository in a local folder
-- Open Project in IntelliJ IDE
+- Open Project in IntelliJ IDE Open Intellija -> File -> Open -> select POM.xml -> OK
 - right click on POM.xml-> import dependencies
 
 # Execute tests using Runner file
