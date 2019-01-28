@@ -25,7 +25,7 @@ The following explains the steps involved in Building and Installing the Solutio
 # Automation Framework expectations: 
 - Automation framework should be designed in such a way that it should be moduler, extendable, maintainable, scalable, high performance, easy to write scripts, easy to understand the code logic.
 
-# How proposed automation framework solve problem statement:
+# How proposed automation framework Meet the expectations:
 
 # Automation framework overview 
 
