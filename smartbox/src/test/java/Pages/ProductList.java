@@ -14,6 +14,7 @@ public class ProductList {
      */
     private String _cssLocatorType = "css";
     private String _locatorValue = "section#ac-cloudSearchResults article:nth-child(1) > a > div.thematic__bottom > div.button.hide-for-small";
+    private String _filterTextLocatorType = "aside#catalog-search-menu div > header > h2";
 
     /**
      * Constructor to store driver instance for reuse
@@ -43,5 +44,26 @@ public class ProductList {
      */
     public void selectProduct(String productName) {
         getListOfProducts(_cssLocatorType, _locatorValue).click();
+    }
+
+    /**
+     * Check Search filter displayed on product List Page
+     */
+    public void checkSearchFilter()
+    {
+        ElementFactory element = new ElementFactory();
+        WebElement filter = element.findElement("css","aside#catalog-search-menu div > header > h2", _driver );
+        filter.click();
+    }
+
+
+    /**
+     * Check Review Link displayed on product List Page
+     */
+    public void checkReviewLink()
+    {
+        ElementFactory element = new ElementFactory();
+        WebElement review = element.findElement("css","section#ac-cloudSearchResults article:nth-child(1) > a > div.thematic__bottom > div.price.clearfix.hide-for-small > span.rating.right > i", _driver );
+        review.isDisplayed();
     }
 }

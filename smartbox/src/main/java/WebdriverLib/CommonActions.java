@@ -3,6 +3,7 @@ package WebdriverLib;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class CommonActions {
 
@@ -25,5 +26,26 @@ public class CommonActions {
     {
         Actions action = new Actions(_driver);
         action.moveToElement(element).perform();
+    }
+
+    /**
+     * Perform Mouse click action on element
+     * @param element Elemnt ID to perform mouse action
+     */
+    public void mouseClick(WebElement element)
+    {
+        Actions action = new Actions(_driver);
+        action.click(element).perform();
+    }
+
+    /**
+     * Select value from dropdown
+     * @param element element ID
+     * @param value value to be selected
+     */
+    public void selectFromDropDown(WebElement element, String  value)
+    {
+        Select dropdown= new Select(element);
+        dropdown.selectByValue(value);
     }
 }

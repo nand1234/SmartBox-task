@@ -16,7 +16,7 @@ Scenario: Verify customer can see filter options on selecting category and subca
 Scenario: Verify customer can see suggestions in filter search box
     Given Customer on smart box landing page
     When Customer select category and sub category
-    Then filter options display
+    Then filter options displays on UI
     And suggestions displays in filter box
 
 Scenario: Verify customer can see Review link on box page

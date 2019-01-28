@@ -3,6 +3,7 @@ package WebdriverLib;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -66,9 +67,12 @@ public class BrowserFactory {
      */
     public void navigateToURL(WebDriver driver)
     {
+        ElementFactory element = new ElementFactory();
         driver.get(System.getProperty("TestURL"));
-        driver.findElement(By.cssSelector("a[class=\"optanon-alert-box-close banner-close-button\"]")).click();
-
+        WebElement ele = element.findElement("css","a[class=\"optanon-alert-box-close banner-close-button\"]", _driver );
+        if (ele.isDisplayed())
+        {
+            ele.click();
+        }
     }
-
 }

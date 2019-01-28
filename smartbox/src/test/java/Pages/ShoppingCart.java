@@ -1,5 +1,6 @@
 package Pages;
 
+import WebdriverLib.CommonActions;
 import WebdriverLib.ElementFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,8 +13,8 @@ public class ShoppingCart {
      * UI Locator details
      */
     private String _cssLocatorType = "css";
-    private String _removeItemLocatorValue = "div#cart-items i";
-    private String _checkOutLocatorValue = "div#sticky button[type=\"button\"] > span";
+    private String _removeItemLocatorValue = "div#cart-items div.columns.item__box-qty__remove-wrapper > a";
+    private String _checkOutLocatorValue = "a[class=\"item__box-qty__remove button no-arrow\"]";
 
     /**
      * Constructor to store driver instance for reuse
@@ -53,7 +54,11 @@ public class ShoppingCart {
      */
     public void removeitemfromCart()
     {
+        ElementFactory element = new ElementFactory();
+        CommonActions click = new CommonActions(_driver);
         eleRemoveItem(_cssLocatorType,_removeItemLocatorValue).click();
+        WebElement confirm = element.findElement("css","a[id=\"cart-remove-confirm-accept\"]", _driver );
+        click.mouseClick(confirm);
     }
 
     /**
@@ -62,5 +67,42 @@ public class ShoppingCart {
     public void checkOut()
     {
         eleCheckOut(_cssLocatorType,_checkOutLocatorValue).click();
+    }
+
+    /**
+     * Check Item added to the Cart
+     */
+    public void checkItemAddedToCart()
+    {
+        ElementFactory element = new ElementFactory();
+        WebElement total = element.findElement("css","div[class=\"total summary-total__section clearfix\"]", _driver );
+        total.isDisplayed();
+    }
+
+    /**
+     * Adjust item quantity
+     */
+    public void adjustQty(String qty)
+    {
+        ElementFactory element = new ElementFactory();
+        CommonActions action = new CommonActions(_driver);
+        WebElement eleqty = element.findElement("css","select[class=\"quote-item-version-qty\"]", _driver );
+        action.selectFromDropDown(eleqty, qty);
+    }
+
+    /**
+     * Check user navigated to payment page
+     * @return
+     */
+    public boolean verifyCheckout()
+    {
+       if (_driver.getCurrentUrl().equals("https://www.smartbox.com/fr/checkout/newpayment/"))
+       {
+           return true;
+       }
+       else
+       {
+           return false;
+       }
     }
 }
