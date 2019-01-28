@@ -35,6 +35,9 @@ public class ElementFactory {
                 case "css":
                     Locator = By.cssSelector(locatorValue);
                     break;
+                case "linktext":
+                    Locator = By.linkText(locatorValue);
+                    break;
                 default:
                     throw new Exception("Locator Type not found");
             }
@@ -54,14 +57,14 @@ public class ElementFactory {
      * @param driver browser webDriver
      * @return WebElement
      */
-    public WebElement findElement(String locatorType, String locatorValue,WebDriver driver)
+    public WebElement findElement(String locatorType, String locatorValue,WebDriver driver , boolean waitForclickable)
     {
         ElementWait wait = new ElementWait();
         By locator;
         WebElement element;
         try {
             locator = getLocator(locatorType, locatorValue);
-            element= wait.waitForElement(locator,driver);
+            element= wait.waitForElement(locator,driver,waitForclickable);
         }
         catch (Exception ex)
         {

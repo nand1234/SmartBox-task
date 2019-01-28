@@ -14,6 +14,6 @@ Scenario: Verify Customer continue shopping after adding item to cart
    Given Customer added item to cart
    Then Customer continue shopping by adding another item to the cart
 
-Scenario: Verify Customer cannot add more than 5 boxes of each title to cart
+Scenario: Verify Customer cannot add more than 6 boxes of each title to cart
    Given Customer added item to 6 items to cart
    Then Customer cannot do purchase

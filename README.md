@@ -22,4 +22,43 @@ The following explains the steps involved in Building and Installing the Solutio
 - Got to View -> ToolWindows -> Maven
    - select Test option -> click on Run   
 
+# Automation Framework expectations: 
+- Automation framework should be designed in such a way that it should be moduler, extendable, maintainable, scalable, high performance, easy to write scripts, easy to understand the code logic.
+
+# How proposed automation framework solve problem statement:
+
+# Automation framework overview 
+
+- Design 
+  - This is moduler based automation framework. 
+
+- Used programming concept to increase maintanability:
+ - class
+ - object
+ - abstraction
+- encapsulaton 
+- solid principles 
+
+- Used design patterns
+ - page object
+ - factory 
+
+# Extendable : Locator type, value and test data is decoupled from the framework. which makes it Supportive to automation frameworks like
+- data driven
+- keyword driven
+- BDB (cucumber)
+- screenplay(jbehave)
+
+# High performance
+- wait for element handled using intelligent wait having pooling time. This will increase script execution time.
+
+# Easy to write scripts:  
+- Method naming used across framework based on the product functionality. So any manual/ automation tester can write test script without any hustle.
+
+# Easy to understand  code: 
+- All methods have code comment attached, to define its purpose and help developer to understand the code.
+
+   
+# Automation framework design flow
+
 ![Alt text](/AutomationArchitecture.png "Automation Architecture Digram")

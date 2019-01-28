@@ -27,7 +27,7 @@ public class ScenarioSteps {
 
 
     @Before
-    public void setup()
+    public void setup() throws InterruptedException
     {
         _browser = new BrowserFactory();
         _driver = _browser.launchBrowser();
@@ -36,12 +36,6 @@ public class ScenarioSteps {
         _productDetails = new ProductDetails(_driver);
         _cart = new ShoppingCart(_driver);
         _factory = new CommomFactory(_driver);
-
-
-//        _browser.navigateToURL(_driver);
-//        _menu.searchBox("Week-End Gourmand En Amoureux");
-//        _productList.checkSearchFilter();
-//        _productList.checkReviewLink();
     }
 
     @After
@@ -57,7 +51,7 @@ public class ScenarioSteps {
 
     @When("^Customer select category and Subcategory$")
     public void Customer_select_category_and_Subcategory() throws Throwable {
-        _menu.selectCategoryAndSubCategory("sejour", "1  nuit");
+        _menu.selectCategoryAndSubCategory("1 unit","1 unit");
     }
 
     @Then("^List of products displayed$")
@@ -79,7 +73,6 @@ public class ScenarioSteps {
 
     @When("^Customer add item to the Cart$")
     public void Customer_add_item_to_the_Cart() throws Throwable {
-
         _productDetails.addToBasket();
         _productDetails.viewCart();
         _menu.viewShoppingCart();
@@ -87,19 +80,21 @@ public class ScenarioSteps {
 
     @Then("^Product display in the shopping cart$")
     public void Product_display_in_the_shopping_cart() throws Throwable {
+        _menu.viewShoppingCart();
         _cart.checkItemAddedToCart();
     }
 
     @Then("^Customer can Remove the Item from the Cart$")
     public void Customer_can_Remove_the_Item_from_the_Cart() throws Throwable {
-        _cart.removeitemfromCart();
+        _menu.viewShoppingCart();
+        _cart.removeItemfromCart();
     }
 
     @Given("^Customer added item to cart$")
     public void Customer_added_item_to_cart() throws Throwable {
         _browser.navigateToURL(_driver);
         _factory.addItemToTheBasket("sejour", "1  nuit","Week-end gourmand en amoureux");
-
+        _productDetails.continueShopping();
     }
 
     @Then("^Customer continue shopping by adding another item to the cart$")
@@ -113,13 +108,13 @@ public class ScenarioSteps {
         _browser.navigateToURL(_driver);
         _factory.addItemToTheBasket("sejour", "1  nuit","Week-end gourmand en amoureux");
         _productDetails.viewCart();
-        _menu.viewShoppingCart();
         _cart.adjustQty("6");
 
     }
 
     @Then("^Customer cannot do purchase$")
     public void Customer_cannot_do_purchase() throws Throwable {
+        _menu.viewShoppingCart();
         _cart.checkOut();
         boolean status = _cart.verifyCheckout();
         if (status == true)

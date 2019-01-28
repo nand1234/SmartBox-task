@@ -14,8 +14,8 @@ public class ProductDetails {
      */
     private String _cssLocatorType = "css";
     private String _basketLocatorValue = "div#box-type-ebox-classic span > span > span";
-    private String _continueLocatorValue = "div#box-type-ebox-classic span > span > span";
-    private String _seeCartLocatorValue = "div#addtocart-confirmation a.button.no-margin-bottom.close-reveal-modal.close-reveal-modal--no-style";
+    private String _continueLocatorValue = "div#addtocart-confirmation a.button.no-margin-bottom.close-reveal-modal.close-reveal-modal--no-style";
+    private String _seeCartLocatorValue = "div#addtocart-confirmation a.button.primary.no-margin-bottom";
 
     /**
      * Constructor to store driver instance for reuse
@@ -35,19 +35,19 @@ public class ProductDetails {
     public WebElement eleBasket(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver ,true);
     }
 
     /**
      * Find Check Cart item on UI
      * @param locatorType Locator Type e.g id. Css
      * @param locatorValue locator value displayed on the UI
-     * @return
+     * @return WebElement
      */
     public WebElement eleCheckCart(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver ,true  );
     }
 
     /**
@@ -59,7 +59,7 @@ public class ProductDetails {
     public WebElement eleContinueShopping(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver, true   );
     }
 
     /**
@@ -71,7 +71,7 @@ public class ProductDetails {
     }
 
     /**
-     * See shopping cart
+     * Vievu shopping cart
      */
     public void viewCart()
     {
@@ -81,7 +81,7 @@ public class ProductDetails {
     }
 
     /**
-     * See shopping cart
+     * Click on Continue shopping
      */
     public void continueShopping()
     {
@@ -96,7 +96,7 @@ public class ProductDetails {
     public void productTitleDisplay()
     {
         ElementFactory element = new ElementFactory();
-        WebElement review = element.findElement("css","h1#product-info__title", _driver );
+        WebElement review = element.findElement("css","h1#product-info__title", _driver ,false);
         review.isDisplayed();
     }
 

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: runners.RunCukesTest
--------------------------------------------------------------------------------
-Tests run: 46, Failures: 0, Errors: 0, Skipped: 38, Time elapsed: 0.703 s - in runners.RunCukesTest

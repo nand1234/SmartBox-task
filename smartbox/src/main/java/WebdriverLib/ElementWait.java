@@ -9,20 +9,9 @@ import java.util.List;
 
 public class ElementWait {
 
-    private static final int GLOBAL_TIME_OUT = 60;// In Seconds
+    private static final int GLOBAL_TIME_OUT = 80;// In Seconds
     private static final int GLOBAL_POLLING_TIME = 1; // In Seconds
-    private static final int GLOBAL_EXP_CONDITION_TIME_OUT = 60; // In Seconds
-
-    /**
-     *
-     * @param locator
-     * @param driver
-     * @return
-     */
-    public WebElement waitForElement(By locator , WebDriver driver) {
-        return waitForElement(locator , driver,true);
-
-    }
+    private static final int GLOBAL_EXP_CONDITION_TIME_OUT = 80; // In Seconds
 
 
     /**

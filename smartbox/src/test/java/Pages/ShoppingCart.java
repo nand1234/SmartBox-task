@@ -34,7 +34,7 @@ public class ShoppingCart {
     public WebElement eleRemoveItem(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver , true);
     }
 
     /**
@@ -46,18 +46,18 @@ public class ShoppingCart {
     public WebElement eleCheckOut(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver , true );
     }
 
     /**
      * Remove item from the Cart
      */
-    public void removeitemfromCart()
+    public void removeItemfromCart()
     {
         ElementFactory element = new ElementFactory();
         CommonActions click = new CommonActions(_driver);
         eleRemoveItem(_cssLocatorType,_removeItemLocatorValue).click();
-        WebElement confirm = element.findElement("css","a[id=\"cart-remove-confirm-accept\"]", _driver );
+        WebElement confirm = element.findElement("css","a[id=\"cart-remove-confirm-accept\"]", _driver, true );
         click.mouseClick(confirm);
     }
 
@@ -75,7 +75,7 @@ public class ShoppingCart {
     public void checkItemAddedToCart()
     {
         ElementFactory element = new ElementFactory();
-        WebElement total = element.findElement("css","div[class=\"total summary-total__section clearfix\"]", _driver );
+        WebElement total = element.findElement("css","div[class=\"total summary-total__section clearfix\"]", _driver ,false );
         total.isDisplayed();
     }
 
@@ -86,7 +86,7 @@ public class ShoppingCart {
     {
         ElementFactory element = new ElementFactory();
         CommonActions action = new CommonActions(_driver);
-        WebElement eleqty = element.findElement("css","select[class=\"quote-item-version-qty\"]", _driver );
+        WebElement eleqty = element.findElement("css","select[class=\"quote-item-version-qty\"]", _driver ,true);
         action.selectFromDropDown(eleqty, qty);
     }
 
@@ -94,8 +94,9 @@ public class ShoppingCart {
      * Check user navigated to payment page
      * @return
      */
-    public boolean verifyCheckout()
+    public boolean verifyCheckout() throws InterruptedException
     {
+        Thread.sleep(1000);
        if (_driver.getCurrentUrl().equals("https://www.smartbox.com/fr/checkout/newpayment/"))
        {
            return true;

@@ -65,11 +65,14 @@ public class BrowserFactory {
      * Navigate to the Test URL
      * @return Launched URL
      */
-    public void navigateToURL(WebDriver driver)
+    public void navigateToURL(WebDriver driver) throws InterruptedException
     {
         ElementFactory element = new ElementFactory();
+        ElementWait wait = new ElementWait();
         driver.get(System.getProperty("TestURL"));
-        WebElement ele = element.findElement("css","a[class=\"optanon-alert-box-close banner-close-button\"]", _driver );
+        wait.waitForPageLoad(_driver);
+        Thread.sleep(1500);
+        WebElement ele = element.findElement("css","a[class=\"optanon-allow-all accept-cookies-button\"]", _driver ,true);
         if (ele.isDisplayed())
         {
             ele.click();

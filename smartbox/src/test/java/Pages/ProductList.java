@@ -27,7 +27,7 @@ public class ProductList {
 
 
     /**
-     * find List of Products on UI
+     * Find List of Products on UI
      * @param locatorType Locator Type e.g id. Css
      * @param locatorValue locator value displayed on the UI
      * @return Product to be selected
@@ -35,7 +35,7 @@ public class ProductList {
     public WebElement getListOfProducts(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver , true);
     }
 
     /**
@@ -52,7 +52,7 @@ public class ProductList {
     public void checkSearchFilter()
     {
         ElementFactory element = new ElementFactory();
-        WebElement filter = element.findElement("css","aside#catalog-search-menu div > header > h2", _driver );
+        WebElement filter = element.findElement("css",_filterTextLocatorType, _driver ,true );
         filter.click();
     }
 
@@ -63,7 +63,7 @@ public class ProductList {
     public void checkReviewLink()
     {
         ElementFactory element = new ElementFactory();
-        WebElement review = element.findElement("css","section#ac-cloudSearchResults article:nth-child(1) > a > div.thematic__bottom > div.price.clearfix.hide-for-small > span.rating.right > i", _driver );
+        WebElement review = element.findElement("css","section#ac-cloudSearchResults article:nth-child(1) > a > div.thematic__bottom > div.price.clearfix.hide-for-small > span.rating.right > i", _driver, true );
         review.isDisplayed();
     }
 }

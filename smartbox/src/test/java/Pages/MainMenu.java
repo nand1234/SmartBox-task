@@ -1,7 +1,6 @@
 package Pages;
 
 import WebdriverLib.CommonActions;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import WebdriverLib.ElementFactory;
@@ -16,9 +15,10 @@ public class MainMenu {
      * UI Locator details
      */
     private String _cssLocatorType = "css";
-    private String _categoryLocatorValue = "ul#aut-header-menu li:nth-child(1) > a";
-    private String _subCategoryLocatorValue = "ul#aut-header-menu li:nth-child(1) > ul > li:nth-child(3) > a";
-    private String _mainSearchLocatorValue = "input[class=\"search-input\"]";
+    private String _linktextPathLocatorType = "linktext";
+    private String _categoryLocatorValue = "#qa-megamenu-stay";
+    private String _subCategoryLocatorValue = "1 nuit";
+    private String _mainSearchLocatorValue = "form#search input[name=\"text\"]";
 
     /**
      * Constructor to store driver instance to reuse
@@ -38,11 +38,11 @@ public class MainMenu {
     public WebElement eleGetCategory(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver , false);
     }
 
     /**
-     * Return Subcategoy element displayed on UI
+     * Find Subcategoy element displayed on UI
      * @param locatorType Locator Type e.g id. Css
      * @param locatorValue locator value displayed on the UI
      * @return SubCategory to select
@@ -50,11 +50,11 @@ public class MainMenu {
     public WebElement eleGetSubCategory(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver , false);
     }
 
     /**
-     * Return Main search element displayed on UI
+     * Find Main search element displayed on UI
      * @param locatorType Locator Type e.g id. Css
      * @param locatorValue locator value displayed on the UI
      * @return search box to select
@@ -62,7 +62,7 @@ public class MainMenu {
     public WebElement eleMainSearch(String locatorType, String locatorValue)
     {
         ElementFactory element = new ElementFactory();
-        return element.findElement(locatorType,locatorValue, _driver );
+        return element.findElement(locatorType,locatorValue, _driver ,true);
     }
 
     /**
@@ -70,12 +70,13 @@ public class MainMenu {
      * @param categoryName Category Name to be selected
      * @param subCategoryName SubCategoryName to be selected
      */
-    public void selectCategoryAndSubCategory(String categoryName, String subCategoryName)
+    public void selectCategoryAndSubCategory(String categoryName, String subCategoryName) throws InterruptedException
     {
-        CommonActions mouseOver = new CommonActions(_driver);
+        CommonActions mouseAction = new CommonActions(_driver);
         WebElement category = eleGetCategory(_cssLocatorType, _categoryLocatorValue);
-        mouseOver.moveToElement(category);
-        eleGetSubCategory(_cssLocatorType,_subCategoryLocatorValue).click();
+        mouseAction.moveToElement(category);
+        WebElement subCategory  = eleGetSubCategory(_linktextPathLocatorType,_subCategoryLocatorValue);
+        subCategory.click();
     }
 
     /**
@@ -94,18 +95,18 @@ public class MainMenu {
     public void selectBoxFromSuggestion()
     {
         ElementFactory element = new ElementFactory();
-        WebElement box = element.findElement("css","form#search strong", _driver );
+        WebElement box = element.findElement("css","form#search strong", _driver ,true);
         box.click();
     }
 
     /**
-     * select box from suggestion
+     * Click on VIew Shopping cart
      */
     public void viewShoppingCart()
     {
         ElementFactory element = new ElementFactory();
         CommonActions click = new CommonActions(_driver);
-        WebElement cart = element.findElement("css","a[class=\"header-cart qa-cart-icon js-cart-icon has-basket-count\"]", _driver );
+        WebElement cart = element.findElement("css","section#header-dropdown-wrapper span.header-cart__title.header-cart__title--show-for-large", _driver, false );
         click.mouseClick(cart);
     }
 }
